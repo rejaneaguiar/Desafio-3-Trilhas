@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <a href="login.html" class="back-button">← Voltar para Login</a>
+            <h2 class="h2">Formulário de inscrição</h2>
+            <p class = "p">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+
+            <form id="inscricaoForm">
+                <fieldset>
+                    <legend class="legenda">Informações do participante</legend>
+
+                    <label class="label" for="nome">Nome completo</label>
+                    <input class="input" type="text" id="nome" placeholder="Seu nome" required>
+
+                    <label class="label" for="data_nascimento">Data de nascimento</label>
+                    <input class="input" type="date" id="data_nascimento" required>
+
+                    <label class="label" for="cpf">CPF</label>
+                    <input class="input" type="text" id="cpf" placeholder="000.000.000-00" required>
+
+                    <label class="label" for="sexo">Sexo</label>
+                    <select class="select"id="sexo" required>
+                        <option value="">Selecione</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label class="label" for="email">E-mail</label>
+                    <input class="input" type="email" id="email" placeholder="email@exemplo.com" required>
+
+                    <label class="label" for="telefone">Telefone</label>
+                    <input class="input" type="tel" id="telefone" placeholder="(99) 99999-9999" required>
+
+                    <label class="label" for="documento">Documento de identidade</label>
+                    <input class="input" type="file" id="documento">
+                </fieldset>
+
+                <fieldset>
+                    <legend class="legenda">Endereço residencial</legend>
+
+                    <label class="label" for="cep">CEP</label>
+                    <input class="input" type="text" id="cep" placeholder="00000-000" required>
+
+                    <label class="label" for="rua">Rua</label>
+                    <input class="input" type="text" id="rua" placeholder="Nome da rua" required>
+
+                    <label class="label" for="numero">Número</label>
+                    <input class="input" type="text" id="numero" placeholder="Nº" required>
+
+                    <label class="label" for="cidade">Cidade</label>
+                    <input class="input" type="text" id="cidade" placeholder="Nome da cidade" required>
+
+                    <label class="label" for="estado">UF</label>
+                    <input class="input" type="text" id="estado" placeholder="UF" required>
+
+                    <label class="label" for="comprovante">Comprovante de residência</label>
+                    <input class="input" type="file" id="comprovante">
+                </fieldset>
+
+                <fieldset>
+                    <legend class="legenda">Trilhas de Seleção</legend>
+                    <h4 class="h4">Selecione apenas uma trilha:</h4>
+                    <div class="caixa-de-seleção">
+                        <div class="marcaçao">
+                            <label>
+                                <input type="radio" name="trilha" value="front-end" class="icone">
+                                <div class="icone-texto">
+                                    <img src="img/front-end.png" alt="Ícone Front-end">
+                                    <span class="tipoTrilha">Programação Front-end</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="marcaçao">
+                            <label>
+                                <input type="radio" name="trilha" value="back-end" class="icone">
+                                <div class="icone-texto">
+                                    <img src="img/back-end.png" alt="Ícone Back-end">
+                                    <span class="tipoTrilha">Programação Back-end</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="marcaçao">
+                            <label>
+                                <input type="radio" name="trilha" value="jogos" class="icone">
+                                <div class="icone-texto">
+                                    <img src="img/jogos.png" alt="Ícone Jogos">
+                                    <span class="tipoTrilha">Programação de Jogos</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="marcaçao">
+                            <label>
+                                <input type="radio" name="trilha" value="Design e Experiência" class="icone">
+                                <div class="icone-texto">
+                                    <img src="img/ux.png" alt="Ícone Design">
+                                    <span class="tipoTrilha">Design e Experiência</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="marcaçao">
+                            <label>
+                                <input type="radio" name="trilha" value="Ciência de Dados" class="icone">
+                                <div class="icone-texto">
+                                    <img src="img/banco-de-dados.png" alt="Ícone Ciência de Dados">
+                                    <span class="tipoTrilha">Ciência de Dados</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="legenda">Criação de Acesso</legend>
+                    
+                    <label class="label" for="userId">ID de Usuário</label>
+                    <input class="input" type="text" id="userId" placeholder="Crie um ID de usuário" required>
+                    
+                    <label class="label" for="password">Senha</label>
+                    <input class="input" type="password" id="password" placeholder="Crie uma senha" required>
+                    
+                    <label class="label" for="confirmPassword">Confirme a Senha</label>
+                    <input class="input" type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
+                </fieldset>
+
+                <div class="termos">
+                    <input type="checkbox" id="termos" required>
+                    <label class="label" for="termos">
+                        Declaro que li e concordo com os <span class="destaque">Termos e Condições</span> e com a <span class="destaque">Política de Privacidade</span>.
+                    </label>
+                </div>
+
+                <button type="button" id="saveButton">Salvar Progresso</button>
+                <button class="button" type="submit">Enviar Inscrição</button>
+            </form>
+        </div>
+
+        <div class="image-container">
+            <img src="img/Ilustration.png" alt="Ilustração">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
